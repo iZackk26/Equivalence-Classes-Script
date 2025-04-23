@@ -19,6 +19,8 @@ Your **`config.json`** must follow this schema:
   //     • "Equivalencia"  (string): description of the class
   //     • "Estado"        (string): "Válido" or "Inválido"
   //     • "Representantes" (array of strings): example values
+  //     • "Tipo": Caja Negra o Caja Blanca
+
 
     "clases_equivalencia": [
       {
@@ -26,6 +28,7 @@ Your **`config.json`** must follow this schema:
         "Equivalencia": "Nacional (dropdown)",
         "Estado": "Válido",
         "Representantes": ["Nacional"]
+        "Tipo": "caja negra" // Opcional
       },
       ...
     ]

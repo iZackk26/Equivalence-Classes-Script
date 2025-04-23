@@ -58,38 +58,50 @@ def crear_df_casos(variables, combinaciones):
 def crear_df_clases(clases_equiv, df_casos):
     """
     Crea el DataFrame de ClasesEquivalencia:
-      Variable, Equivalencia, Estado, Representantes, CP001, CP002, ...
+      Variable, Equivalencia, Estado, [Tipo], Representantes, CP001, CP002, ...
     Pone '*' cuando el valor del CP aparece en Representantes.
     """
-    # 1) Base DF
+    # 1) Base DF: copiamos Tipo solo si existe en el JSON
     datos = []
     for ce in clases_equiv:
-        datos.append({
+        fila = {
             "Variable": ce["Variable"],
             "Equivalencia": ce["Equivalencia"],
             "Estado": ce["Estado"],
             "Representantes": ", ".join(ce["Representantes"]),
             "_RepsList": ce["Representantes"]
-        })
+        }
+        # aquí la clave: si hay "Tipo" en el JSON, lo añadimos
+        if "Tipo" in ce:
+            fila["Tipo"] = ce["Tipo"]
+        datos.append(fila)
+
     df_ce = pd.DataFrame(datos)
 
-    # 2) Agregar columnas vacías CPxxx
+    # 2) Reordenar para que Tipo quede después de Estado (si existe)
+    cols_base = ["Variable", "Equivalencia", "Estado"]
+    if "Tipo" in df_ce.columns:
+        cols_base.append("Tipo")
+    cols_base += ["Representantes", "_RepsList"]
+    df_ce = df_ce[cols_base]
+
+    # 3) Agregar columnas vacías CPxxx
     num_casos = len(df_casos)
     cp_cols = [f"CP{str(i).zfill(3)}" for i in range(1, num_casos+1)]
     for cp in cp_cols:
         df_ce[cp] = ""
 
-    # 3) Rellenar "*"
+    # 4) Rellenar "*"
     for idx, fila in df_ce.iterrows():
-        var = fila["Variable"]
         reps_list = fila["_RepsList"]
         for tc in cp_cols:
-            val = df_casos.loc[df_casos["CP"] == tc, var].values[0]
-            if val in reps_list:
+            valor = df_casos.loc[df_casos["CP"] == tc, fila["Variable"]].values[0]
+            if valor in reps_list:
                 df_ce.at[idx, tc] = "*"
 
-    # 4) Eliminar columna interna
+    # 5) Eliminar columna interna
     return df_ce.drop(columns=["_RepsList"])
+
 
 def exportar_excel(df_ce, df_casos, filename="formulario_casos_prueba.xlsx"):
     with pd.ExcelWriter(filename) as writer:
