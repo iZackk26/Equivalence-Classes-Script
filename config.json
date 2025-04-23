@@ -1,0 +1,165 @@
+{
+  "clases_equivalencia": [
+    {
+      "Variable": "Tipo identificación",
+      "Equivalencia": "Nacional (dropdown)",
+      "Estado": "Válido",
+      "Representantes": ["Nacional"]
+    },
+    {
+      "Variable": "Tipo identificación",
+      "Equivalencia": "Otro no existente",
+      "Estado": "Inválido",
+      "Representantes": ["Extranjero", "Pasaporte"]
+    },
+
+    {
+      "Variable": "Identificación",
+      "Equivalencia": "9 dígitos (formato correcto)",
+      "Estado": "Válido",
+      "Representantes": ["208620863"]
+    },
+    {
+      "Variable": "Identificación",
+      "Equivalencia": "Menos de 9 dígitos",
+      "Estado": "Inválido",
+      "Representantes": ["123", "45678"]
+    },
+    {
+      "Variable": "Identificación",
+      "Equivalencia": "Más de 9 dígitos",
+      "Estado": "Inválido",
+      "Representantes": ["20000000111", "123456789012"]
+    },
+    {
+      "Variable": "Identificación",
+      "Equivalencia": "No numérico",
+      "Estado": "Inválido",
+      "Representantes": ["2102aa,b", "abcd5678x"]
+    },
+
+    {
+      "Variable": "Nombre",
+      "Equivalencia": "Cadena no vacía",
+      "Estado": "Válido",
+      "Representantes": ["Juan Perez", "Maria"]
+    },
+    {
+      "Variable": "Nombre",
+      "Equivalencia": "Cadena vacía",
+      "Estado": "Inválido",
+      "Representantes": [""]
+    },
+
+    {
+      "Variable": "Teléfono Celular",
+      "Equivalencia": "8 dígitos, inicia 5,6,7,8",
+      "Estado": "Válido",
+      "Representantes": ["59757651", "69757651", "79757651", "89757651"]
+    },
+    {
+      "Variable": "Teléfono Celular",
+      "Equivalencia": "Otros casos (inválidos)",
+      "Estado": "Inválido",
+      "Representantes": ["11111111","38975765","123","","598e7651"]
+    },
+
+    {
+      "Variable": "Teléfono Fijo",
+      "Equivalencia": "8 dígitos, inicia con 2 o 4",
+      "Estado": "Válido",
+      "Representantes": ["24717071","44717071"]
+    },
+    {
+      "Variable": "Teléfono Fijo",
+      "Equivalencia": "Vacío (campo opcional)",
+      "Estado": "Válido",
+      "Representantes": [""]
+    },
+    {
+      "Variable": "Teléfono Fijo",
+      "Equivalencia": "Otros casos (inválidos)",
+      "Estado": "Inválido",
+      "Representantes": ["12232","84845625","abcd5678"]
+    },
+
+    {
+      "Variable": "Provincia",
+      "Equivalencia": "Provincia válida (CR)",
+      "Estado": "Válido",
+      "Representantes": ["San José","Alajuela","Cartago","Heredia","Guanacaste","Puntarenas","Limón"]
+    },
+    {
+      "Variable": "Provincia",
+      "Equivalencia": "Provincia no existente",
+      "Estado": "Inválido",
+      "Representantes": ["ProvinciaX","OtroPais"]
+    },
+
+    {
+      "Variable": "Cantón",
+      "Equivalencia": "Cantón válido",
+      "Estado": "Válido",
+      "Representantes": ["CantónValido"]
+    },
+    {
+      "Variable": "Cantón",
+      "Equivalencia": "Cantón no existente",
+      "Estado": "Inválido",
+      "Representantes": ["CantónInvalido"]
+    },
+
+    {
+      "Variable": "Distrito",
+      "Equivalencia": "Distrito válido",
+      "Estado": "Válido",
+      "Representantes": ["DistritoValido"]
+    },
+    {
+      "Variable": "Distrito",
+      "Equivalencia": "Distrito no existente",
+      "Estado": "Inválido",
+      "Representantes": ["DistritoInvalido"]
+    },
+
+    {
+      "Variable": "Dirección",
+      "Equivalencia": "Cadena no vacía",
+      "Estado": "Válido",
+      "Representantes": ["Calle 1","300m este del parque"]
+    },
+    {
+      "Variable": "Dirección",
+      "Equivalencia": "Cadena vacía",
+      "Estado": "Inválido",
+      "Representantes": [""]
+    },
+
+    {
+      "Variable": "Contraseña",
+      "Equivalencia": "Alfanumérico (>=1 carácter)",
+      "Estado": "Válido",
+      "Representantes": ["abc123","X1"]
+    },
+    {
+      "Variable": "Contraseña",
+      "Equivalencia": "Inválida (vacía o con símbolos)",
+      "Estado": "Inválido",
+      "Representantes": ["","abc123$","123*"]
+    },
+
+    {
+      "Variable": "Repetir Contraseña",
+      "Equivalencia": "Coincide y es válida",
+      "Estado": "Válido",
+      "Representantes": ["abc123","X1"]
+    },
+    {
+      "Variable": "Repetir Contraseña",
+      "Equivalencia": "No coincide o es inválida",
+      "Estado": "Inválido",
+      "Representantes": ["","abc123$","dif123","123*"]
+    }
+  ]
+}
+
