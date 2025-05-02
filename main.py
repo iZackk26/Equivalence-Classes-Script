@@ -2,18 +2,65 @@ import json
 import itertools
 import random
 import pandas as pd
+import os
 
 # ────────────────────────────────
 #  CONFIGURACIÓN GLOBAL
 # ────────────────────────────────
-CONFIG_PATH = "config.json"   # <-- ruta a tu JSON de equivalencias
+# CONFIG_PATH = "config.json"   # <-- ruta a tu JSON de equivalencias
+CONFIG_PATH = "config.csv"   # <-- ruta a tu JSON de equivalencias
 MAX_CASOS   = 100             # <-- número máximo de CP a generar
 # ────────────────────────────────
 
-def cargar_clases_equivalencia(path):
-    with open(path, "r", encoding="utf-8") as f:
-        cfg = json.load(f)
-    return cfg["clases_equivalencia"]
+def cargar_fuente_equivalencias(path: str):
+    """
+    Devuelve la misma estructura que antes esperaba `cargar_clases_equivalencia`,
+    pero detecta automáticamente si la fuente es .json o .csv
+    """
+    ext = os.path.splitext(path)[1].lower()
+
+    # ── 1) Caso JSON (sin cambios) ──────────────────────────
+    if ext == ".json":
+        with open(path, "r", encoding="utf‑8") as f:
+            cfg = json.load(f)
+        return cfg["clases_equivalencia"]                 # ← exactamente igual que antes
+
+    # ── 2) Caso CSV ─────────────────────────────────────────
+    if ext == ".csv":
+        df = pd.read_csv(path)
+
+        # Asumimos que la última columna es la de “Validez”
+        var_cols   = df.columns[:-1]
+        estado_col = df.columns[-1]
+
+        clases = []
+        for var in var_cols:
+            # Representantes válidos
+            reps_v = (df.loc[df[estado_col].str.upper() == "V", var]
+                        .dropna().astype(str).unique().tolist())
+            if reps_v:
+                clases.append({
+                    "Variable"       : var,
+                    "Equivalencia"   : f"{var}-Válidos",
+                    "Estado"         : "V",
+                    "Representantes" : reps_v
+                })
+
+            # Representantes inválidos
+            reps_i = (df.loc[df[estado_col].str.upper() != "V", var]
+                        .dropna().astype(str).unique().tolist())
+            if reps_i:
+                clases.append({
+                    "Variable"       : var,
+                    "Equivalencia"   : f"{var}-Inválidos",
+                    "Estado"         : "I",
+                    "Representantes" : reps_i
+                })
+
+        return clases
+
+    # ── 3) Extensión no soportada ───────────────────────────
+    raise ValueError(f"Formato no soportado: {ext}. Usa .json o .csv")
 
 def generar_variables_reps(clases_equiv):
     """
@@ -110,7 +157,7 @@ def exportar_excel(df_ce, df_casos, filename="formulario_casos_prueba.xlsx"):
     print(f"Archivo '{filename}' generado.")
 
 def main():
-    clases_equiv = cargar_clases_equivalencia(CONFIG_PATH)
+    clases_equiv = cargar_fuente_equivalencias(CONFIG_PATH)
 
     # 2) Prepare the combinations
     vars_reps    = generar_variables_reps(clases_equiv)

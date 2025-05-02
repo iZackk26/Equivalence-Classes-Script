@@ -1,164 +1,123 @@
 {
   "clases_equivalencia": [
     {
-      "Variable": "Tipo identificación",
-      "Equivalencia": "Nacional (dropdown)",
+      "Variable": "Uso de la vivienda",
+      "Equivalencia": "Vivienda habitual",
       "Estado": "Válido",
-      "Representantes": ["Nacional"]
+      "Representantes": ["Vivienda habitual"],
+      "Tipo": "Caja Negra"
     },
     {
-      "Variable": "Tipo identificación",
-      "Equivalencia": "Otro no existente",
-      "Estado": "Inválido",
-      "Representantes": ["Extranjero", "Pasaporte"]
-    },
-
-    {
-      "Variable": "Identificación",
-      "Equivalencia": "9 dígitos (formato correcto)",
+      "Variable": "Uso de la vivienda",
+      "Equivalencia": "Segunda vivienda",
       "Estado": "Válido",
-      "Representantes": ["208620863"]
+      "Representantes": ["Segunda vivienda"],
+      "Tipo": "Caja Negra"
     },
     {
-      "Variable": "Identificación",
-      "Equivalencia": "Menos de 9 dígitos",
+      "Variable": "Uso de la vivienda",
+      "Equivalencia": "No seleccionada",
       "Estado": "Inválido",
-      "Representantes": ["123", "45678"]
+      "Representantes": [""],
+      "Tipo": "Caja Negra"
     },
     {
-      "Variable": "Identificación",
-      "Equivalencia": "Más de 9 dígitos",
-      "Estado": "Inválido",
-      "Representantes": ["20000000111", "123456789012"]
-    },
-    {
-      "Variable": "Identificación",
-      "Equivalencia": "No numérico",
-      "Estado": "Inválido",
-      "Representantes": ["2102aa,b", "abcd5678x"]
-    },
-
-    {
-      "Variable": "Nombre",
-      "Equivalencia": "Cadena no vacía",
+      "Variable": "Tipo de vivienda",
+      "Equivalencia": "Nueva",
       "Estado": "Válido",
-      "Representantes": ["Juan Perez", "Maria"]
+      "Representantes": ["Nueva"],
+      "Tipo": "Caja Negra"
     },
     {
-      "Variable": "Nombre",
-      "Equivalencia": "Cadena vacía",
-      "Estado": "Inválido",
-      "Representantes": [""]
-    },
-
-    {
-      "Variable": "Teléfono Celular",
-      "Equivalencia": "8 dígitos, inicia 5,6,7,8",
+      "Variable": "Tipo de vivienda",
+      "Equivalencia": "Segunda mano",
       "Estado": "Válido",
-      "Representantes": ["59757651", "69757651", "79757651", "89757651"]
+      "Representantes": ["Segunda mano"],
+      "Tipo": "Caja Negra"
     },
     {
-      "Variable": "Teléfono Celular",
-      "Equivalencia": "Otros casos (inválidos)",
+      "Variable": "Tipo de vivienda",
+      "Equivalencia": "No seleccionada",
       "Estado": "Inválido",
-      "Representantes": ["11111111","38975765","123","","598e7651"]
+      "Representantes": [""],
+      "Tipo": "Caja Negra"
     },
-
     {
-      "Variable": "Teléfono Fijo",
-      "Equivalencia": "8 dígitos, inicia con 2 o 4",
+      "Variable": "Ubicación de la vivienda",
+      "Equivalencia": "Ciudad válida",
       "Estado": "Válido",
-      "Representantes": ["24717071","44717071"]
+      "Representantes": ["Madrid"],
+      "Tipo": "Caja Negra"
     },
     {
-      "Variable": "Teléfono Fijo",
-      "Equivalencia": "Vacío (campo opcional)",
-      "Estado": "Válido",
-      "Representantes": [""]
-    },
-    {
-      "Variable": "Teléfono Fijo",
-      "Equivalencia": "Otros casos (inválidos)",
+      "Variable": "Ubicación de la vivienda",
+      "Equivalencia": "No seleccionada",
       "Estado": "Inválido",
-      "Representantes": ["12232","84845625","abcd5678"]
-    },
-
-    {
-      "Variable": "Provincia",
-      "Equivalencia": "Provincia válida (CR)",
-      "Estado": "Válido",
-      "Representantes": ["San José","Alajuela","Cartago","Heredia","Guanacaste","Puntarenas","Limón"]
+      "Representantes": [""],
+      "Tipo": "Caja Negra"
     },
     {
-      "Variable": "Provincia",
-      "Equivalencia": "Provincia no existente",
+      "Variable": "¿Cuánto cuesta la vivienda sin impuestos?",
+      "Equivalencia": "< 40 000 €",
       "Estado": "Inválido",
-      "Representantes": ["ProvinciaX","OtroPais"]
+      "Representantes": ["39999"],
+      "Tipo": "Caja Negra"
     },
-
     {
-      "Variable": "Cantón",
-      "Equivalencia": "Cantón válido",
+      "Variable": "¿Cuánto cuesta la vivienda sin impuestos?",
+      "Equivalencia": "40 000 € - 4 000 000 €",
       "Estado": "Válido",
-      "Representantes": ["CantónValido"]
+      "Representantes": ["40000", "200000", "2000000", "4000000"],
+      "Tipo": "Caja Negra"
     },
     {
-      "Variable": "Cantón",
-      "Equivalencia": "Cantón no existente",
+      "Variable": "¿Cuánto cuesta la vivienda sin impuestos?",
+      "Equivalencia": "> 4 000 000 €",
       "Estado": "Inválido",
-      "Representantes": ["CantónInvalido"]
+      "Representantes": ["4000001"],
+      "Tipo": "Caja Negra"
     },
-
     {
-      "Variable": "Distrito",
-      "Equivalencia": "Distrito válido",
+      "Variable": "¿Cuánto dinero necesitas?",
+      "Equivalencia": "< 30 000 €",
+      "Estado": "Inválido",
+      "Representantes": ["29999"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "¿Cuánto dinero necesitas?",
+      "Equivalencia": "30 000 € - 3 000 000 €",
       "Estado": "Válido",
-      "Representantes": ["DistritoValido"]
+      "Representantes": ["30000", "100000", "1500000", "3000000"],
+      "Tipo": "Caja Negra"
     },
     {
-      "Variable": "Distrito",
-      "Equivalencia": "Distrito no existente",
+      "Variable": "¿Cuánto dinero necesitas?",
+      "Equivalencia": "> 3 000 000 €",
       "Estado": "Inválido",
-      "Representantes": ["DistritoInvalido"]
+      "Representantes": ["3000001"],
+      "Tipo": "Caja Negra"
     },
-
     {
-      "Variable": "Dirección",
-      "Equivalencia": "Cadena no vacía",
+      "Variable": "¿En cuánto tiempo quieres devolverlo?",
+      "Equivalencia": "< 5 años",
+      "Estado": "Inválido",
+      "Representantes": ["4"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "¿En cuánto tiempo quieres devolverlo?",
+      "Equivalencia": "5 años - 30 años",
       "Estado": "Válido",
-      "Representantes": ["Calle 1","300m este del parque"]
+      "Representantes": ["5", "15", "20", "30"],
+      "Tipo": "Caja Negra"
     },
     {
-      "Variable": "Dirección",
-      "Equivalencia": "Cadena vacía",
+      "Variable": "¿En cuánto tiempo quieres devolverlo?",
+      "Equivalencia": "> 30 años",
       "Estado": "Inválido",
-      "Representantes": [""]
-    },
-
-    {
-      "Variable": "Contraseña",
-      "Equivalencia": "Alfanumérico (>=1 carácter)",
-      "Estado": "Válido",
-      "Representantes": ["abc123","X1"]
-    },
-    {
-      "Variable": "Contraseña",
-      "Equivalencia": "Inválida (vacía o con símbolos)",
-      "Estado": "Inválido",
-      "Representantes": ["","abc123$","123*"]
-    },
-
-    {
-      "Variable": "Repetir Contraseña",
-      "Equivalencia": "Coincide y es válida",
-      "Estado": "Válido",
-      "Representantes": ["abc123","X1"]
-    },
-    {
-      "Variable": "Repetir Contraseña",
-      "Equivalencia": "No coincide o es inválida",
-      "Estado": "Inválido",
-      "Representantes": ["","abc123$","dif123","123*"]
+      "Representantes": ["31"],
+      "Tipo": "Caja Negra"
     }
   ]
 }
