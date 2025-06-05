@@ -1,0 +1,42 @@
+﻿Destination,DateType,StayDuration,Months,Adults,Children,Rooms,Pets
+Madrid,Flexible,Week,March,1,2,1,Yes
+FakeCity,Exact,Month,July,4,0,3,No
+Paris,Flexible,Weekend,January,2,2,2,No
+FakeCity,Exact,Week,January,2,0,3,Yes
+Rome,Exact,Month,June,1,0,2,Yes
+Paris,Exact,Weekend,June,4,0,1,No
+Paris,Flexible,Month,November,4,2,3,Yes
+Rome,Flexible,Weekend,August,1,2,3,No
+Rome,Exact,Week,November,2,0,1,No
+Paris,Exact,Week,February,4,2,2,Yes
+Madrid,Flexible,Weekend,July,2,0,2,Yes
+Madrid,Flexible,Month,June,2,2,3,No
+Madrid,Exact,Month,August,4,0,1,Yes
+Rome,Exact,Month,January,4,2,1,No
+Paris,Flexible,Weekend,October,1,2,2,No
+Rome,Exact,Month,October,2,0,3,Yes
+Paris,Exact,Week,July,1,2,1,No
+Madrid,Exact,Week,October,4,2,1,Yes
+Rome,Exact,Weekend,July,4,0,3,Yes
+Madrid,Flexible,Month,January,1,0,3,Yes
+FakeCity,Flexible,Week,June,1,2,2,Yes
+FakeCity,Exact,Weekend,October,1,2,1,No
+Madrid,Flexible,Weekend,February,2,0,1,No
+New York,Flexible,Weekend,October,4,0,2,Yes
+Rome,Exact,Weekend,March,4,0,3,No
+FakeCity,Exact,Month,March,2,0,2,No
+FakeCity,Flexible,Month,February,1,0,3,No
+New York,Exact,Week,January,1,2,1,No
+New York,Exact,Month,June,2,2,3,No
+New York,Exact,Weekend,November,1,2,2,Yes
+FakeCity,Exact,Week,August,2,0,2,No
+New York,Exact,Week,March,2,2,2,No
+Madrid,Flexible,Weekend,November,2,0,2,No
+FakeCity,Flexible,Month,November,2,2,3,No
+New York,Flexible,Month,August,4,0,2,No
+Paris,Flexible,Weekend,March,1,2,3,Yes
+New York,Flexible,Month,February,4,0,2,No
+Rome,Exact,Month,February,4,0,3,Yes
+Paris,Exact,Month,August,4,2,3,Yes
+New York,Exact,Weekend,July,1,0,2,No
+

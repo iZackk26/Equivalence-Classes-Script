@@ -1,0 +1,89 @@
+{
+  "clases_equivalencia": [
+    {
+      "Variable": "unsorted",
+      "Equivalencia": "Array de longitud >= 1",
+      "Estado": "Válido",
+      "Representantes": ["[5, 3, 8]"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "unsorted",
+      "Equivalencia": "Array vacío",
+      "Estado": "Inválido",
+      "Representantes": ["[]"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "unsorted",
+      "Equivalencia": "null",
+      "Estado": "Inválido",
+      "Representantes": ["null"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "start",
+      "Equivalencia": "0 ≤ start < longitud del array",
+      "Estado": "Válido",
+      "Representantes": ["0", "2"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "start",
+      "Equivalencia": "start < 0",
+      "Estado": "Inválido",
+      "Representantes": ["-1"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "start",
+      "Equivalencia": "start ≥ longitud del array",
+      "Estado": "Inválido",
+      "Representantes": ["5"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "finish",
+      "Equivalencia": "start ≤ finish < longitud del array",
+      "Estado": "Válido",
+      "Representantes": ["0", "4"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "finish",
+      "Equivalencia": "finish < start",
+      "Estado": "Inválido",
+      "Representantes": ["-1", "1 when start=2"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "finish",
+      "Equivalencia": "finish ≥ longitud del array",
+      "Estado": "Inválido",
+      "Representantes": ["5"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "index",
+      "Equivalencia": "0 ≤ index ≤ (finish – start)",
+      "Estado": "Válido",
+      "Representantes": ["0", "2 when finish–start=2"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "index",
+      "Equivalencia": "index < 0",
+      "Estado": "Inválido",
+      "Representantes": ["-1"],
+      "Tipo": "Caja Negra"
+    },
+    {
+      "Variable": "index",
+      "Equivalencia": "index > (finish – start)",
+      "Estado": "Inválido",
+      "Representantes": ["5 when finish–start=3"],
+      "Tipo": "Caja Negra"
+    }
+  ]
+}
+
