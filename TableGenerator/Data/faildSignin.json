@@ -1,0 +1,83 @@
+[
+  {
+    "codigo": "CP-02",
+    "tipo_usuario": "Admin",
+    "username": "",
+    "password": "password\\55",
+    "slider": "sin arrastrar",
+    "remember_me": "no marcado",
+    "is_valid": false,
+    "error_message": "Se esperaba error, pero no apareció"
+  },
+  {
+    "codigo": "CP-05",
+    "tipo_usuario": "Admin",
+    "username": "us...",
+    "password": "",
+    "slider": "arrastrado",
+    "remember_me": "marcado",
+    "is_valid": false,
+    "error_message": "Se esperaba error, pero no apareció"
+  },
+  {
+    "codigo": "CP-06",
+    "tipo_usuario": "User",
+    "username": "us...",
+    "password": "p",
+    "slider": "sin arrastrar",
+    "remember_me": "no marcado",
+    "is_valid": false,
+    "error_message": "Se esperaba error, pero no apareció"
+  },
+  {
+    "codigo": "CP-07",
+    "tipo_usuario": "User",
+    "username": "u",
+    "password": "password\\55",
+    "slider": "arrastrado",
+    "remember_me": "marcado",
+    "is_valid": false,
+    "error_message": "Se esperaba error, pero no apareció"
+  },
+  {
+    "codigo": "CP-10",
+    "tipo_usuario": "User",
+    "username": "98usuario_",
+    "password": "",
+    "slider": "sin arrastrar",
+    "remember_me": "no marcado",
+    "is_valid": false,
+    "error_message": "Se esperaba error, pero no apareció"
+  },
+  {
+    "codigo": "CP-18",
+    "tipo_usuario": "Super",
+    "username": "u",
+    "password": "_55",
+    "slider": "sin arrastrar",
+    "remember_me": "no marcado",
+    "is_valid": false,
+    "error_message": "Se esperaba error, pero no apareció"
+  },
+  {
+    "codigo": "CP-20",
+    "tipo_usuario": "Super",
+    "username": "",
+    "password": "",
+    "slider": "arrastrado",
+    "remember_me": "marcado",
+    "is_valid": false,
+    "error_message": "Se esperaba error, pero no apareció"
+  },
+  {
+    "codigo": "CP-22",
+    "tipo_usuario": "Admin",
+    "username": "9",
+    "password": "",
+    "slider": "sin arrastrar",
+    "remember_me": "no marcado",
+    "is_valid": false,
+    "error_message": "Se esperaba error, pero no apareció"
+  }
+]
+
